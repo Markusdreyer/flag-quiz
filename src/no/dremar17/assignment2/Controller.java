@@ -2,12 +2,12 @@ package no.dremar17.assignment2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
-import javax.xml.soap.Text;
+import javafx.scene.text.Text;
 
 public class Controller {
     @FXML
@@ -15,9 +15,17 @@ public class Controller {
     @FXML
     private ImageView imageView;
     private ProgressBar progressBar;
+    @FXML
     private Text counter;
-    private Text description;
+    @FXML
+    private Text country;
+    @FXML
+    private Text congratulation;
+    @FXML
+    private Button submitButton;
+
     private int stage;
+    private int points;
 
     public void pressButton(ActionEvent event) {
         System.out.println("Hello");
@@ -25,17 +33,25 @@ public class Controller {
 
     @FXML
     private void submitAction(ActionEvent event) {
-
+        country.setText(countryCheck());
+        Image image = new Image(imageCheck());
         if(answer.getText().toLowerCase().equals(capitalCheck())) {
-            Image image = new Image(imageCheck());
             imageView.setImage(image);
             System.out.println("Correct answer!");
-            stage++;
-        }
-        else {
-            System.out.println("Wrong Answer, correct answer is " + capitalCheck());
+            counter.setText(points + 1 + "/5");
+            points++;
         }
 
+        else {
+            imageView.setImage(image);
+            System.out.println("Wrong Answer, correct answer is " + capitalCheck());
+        }
+        stage++;
+        if(stage > 4) {
+            congratulation.setText("Congratulations, you have completed the quiz!");
+            submitButton.setDisable(true);
+        }
+        answer.setText("");
     }
 
     public String imageCheck() {
@@ -88,6 +104,32 @@ public class Controller {
                 break;
         }
         return capital;
+    }
+
+    public String countryCheck() {
+        String country;
+
+        switch (stage) {
+            case 0:
+                country = "Belgium?";
+                break;
+            case 1:
+                country = "Canada?";
+                break;
+            case 2:
+                country = "China?";
+                break;
+            case 3:
+                country = "United Kingdom?";
+                break;
+            case 4:
+                country = "United Kingdom?";
+                break;
+            default:
+                country = "error";
+                break;
+        }
+        return country;
     }
 
 }
