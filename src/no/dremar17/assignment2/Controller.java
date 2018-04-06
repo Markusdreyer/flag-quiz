@@ -7,44 +7,91 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+
+import java.util.ArrayList;
 
 public class Controller {
     @FXML
     private TextField answer;
     @FXML
     private ImageView imageView;
-    private ProgressBar progressBar;
     @FXML
-    private Text counter;
-    @FXML
-    private Text country;
-    @FXML
-    private Text congratulation;
+    private Text country, congratulation, counter;
     @FXML
     private Button submitButton;
+    @FXML
+    private Circle circle1, circle2, circle3, circle4, circle5;
 
     private int stage;
     private int points;
 
-    public void pressButton(ActionEvent event) {
-        System.out.println("Hello");
-    }
 
     @FXML
     private void submitAction(ActionEvent event) {
+        ArrayList list = new ArrayList();
+        list.add(circle1);
+        list.add(circle2);
+        list.add(circle3);
+        list.add(circle4);
+        list.add(circle5);
         country.setText(countryCheck());
         Image image = new Image(imageCheck());
         if(answer.getText().toLowerCase().equals(capitalCheck())) {
             imageView.setImage(image);
             System.out.println("Correct answer!");
-            counter.setText(points + 1 + "/5");
             points++;
+            counter.setText(points + "/5");
+
+            switch (stage) {
+                case 0:
+                    circle1.setFill(Color.GREEN);
+                    break;
+                case 1:
+                    circle2.setFill(Color.GREEN);
+                    break;
+                case 2:
+                    circle3.setFill(Color.GREEN);
+                    break;
+                case 3:
+                    circle4.setFill(Color.GREEN);
+                    break;
+                case 4:
+                    circle5.setFill(Color.GREEN);
+                    break;
+                case 5:
+                    circle2.setFill(Color.GREEN);
+                    break;
+            }
+
+
         }
 
         else {
             imageView.setImage(image);
             System.out.println("Wrong Answer, correct answer is " + capitalCheck());
+            switch (stage) {
+                case 0:
+                    circle1.setFill(Color.RED);
+                    break;
+                case 1:
+                    circle2.setFill(Color.RED);
+                    break;
+                case 2:
+                    circle3.setFill(Color.RED);
+                    break;
+                case 3:
+                    circle4.setFill(Color.RED);
+                    break;
+                case 4:
+                    circle5.setFill(Color.RED);
+                    break;
+                case 5:
+                    circle5.setFill(Color.RED);
+                    break;
+            }
         }
         stage++;
         if(stage > 4) {
