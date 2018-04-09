@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -15,6 +16,16 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="464.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.dremar17.assignment2.Controller">
     <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="416.0" layoutX="-3.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="481.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#63ffdb" />
+                  <Stop color="#e36142" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
         <TextField id="answer" fx:id="answer" layoutX="15.0" layoutY="327.0" prefHeight="27.0" prefWidth="370.0" promptText="answer" />
         <Button fx:id="submitButton" defaultButton="true" layoutX="391.0" layoutY="327.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
         <ImageView id="image" fx:id="imageView" fitHeight="277.0" fitWidth="366.0" layoutX="85.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
@@ -22,14 +33,23 @@
                 <Image url="@images/australia.png" />
             </image>
         </ImageView>
-        <Text fx:id="counter" layoutX="15.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/5" />
-        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What's the capital of" />
-      <Text fx:id="country" layoutX="143.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Australia?" />
-      <Text fx:id="congratulation" layoutX="80.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Congratulations, you have completed the quiz!" wrappingWidth="287.93017578125" />
+      <Text fx:id="congratulation" layoutX="131.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="287.93017578125" />
       <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="25.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="47.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="67.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="89.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="111.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="32.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="486.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#545454" />
+                  <Stop color="#727272" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fx:id="country" fill="WHITE" layoutX="252.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Australia?" wrappingWidth="65.64877319335938" />
+        <Text fill="WHITE" layoutX="122.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What's the capital of" wrappingWidth="132.1199493408203" />
     </children>
 </Pane>

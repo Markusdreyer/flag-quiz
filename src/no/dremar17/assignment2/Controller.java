@@ -3,7 +3,6 @@ package no.dremar17.assignment2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,31 +18,22 @@ public class Controller {
     @FXML
     private ImageView imageView;
     @FXML
-    private Text country, congratulation, counter;
+    private Text country, congratulation;
     @FXML
     private Button submitButton;
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5;
 
     private int stage;
-    private int points;
 
 
     @FXML
     private void submitAction(ActionEvent event) {
-        ArrayList list = new ArrayList();
-        list.add(circle1);
-        list.add(circle2);
-        list.add(circle3);
-        list.add(circle4);
-        list.add(circle5);
         country.setText(countryCheck());
         Image image = new Image(imageCheck());
         if(answer.getText().toLowerCase().equals(capitalCheck())) {
             imageView.setImage(image);
             System.out.println("Correct answer!");
-            points++;
-            counter.setText(points + "/5");
 
             switch (stage) {
                 case 0:
