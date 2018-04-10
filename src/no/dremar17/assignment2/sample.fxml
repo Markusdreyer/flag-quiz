@@ -16,7 +16,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="464.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.dremar17.assignment2.Controller">
     <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="416.0" layoutX="-3.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="481.0">
+      <Rectangle fx:id="bg" arcHeight="5.0" arcWidth="5.0" height="416.0" layoutX="-3.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="481.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -39,7 +39,7 @@
       <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="67.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="89.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="111.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="32.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="486.0">
+      <Rectangle  arcHeight="5.0" arcWidth="5.0" height="32.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="486.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>

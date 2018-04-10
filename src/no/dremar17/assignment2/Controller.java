@@ -7,10 +7,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.Stop;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-import java.util.ArrayList;
 
 public class Controller {
     @FXML
@@ -23,8 +26,12 @@ public class Controller {
     private Button submitButton;
     @FXML
     private Circle circle1, circle2, circle3, circle4, circle5;
+    @FXML
+    private Rectangle bg;
 
     private int stage;
+
+
 
 
     @FXML
@@ -55,6 +62,7 @@ public class Controller {
                     circle2.setFill(Color.GREEN);
                     break;
             }
+
 
 
         }
@@ -93,10 +101,17 @@ public class Controller {
 
     public String imageCheck() {
         String imageURL;
+        Stop[] belgium = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.YELLOW), new Stop(2, Color.RED)};
+        Stop[] canada = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.RED)};
+        Stop[] china = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.RED)};
+        Stop[] uk = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.RED)};
+
 
         switch (stage) {
             case 0:
                 imageURL = "no/dremar17/assignment2/images/belgium.png";
+                LinearGradient lg1 = new LinearGradient(125, 0, 225, 0, false, CycleMethod.NO_CYCLE, belgium);
+                bg.setFill(lg1);
                 break;
             case 1:
                 imageURL = "no/dremar17/assignment2/images/canada.png";
