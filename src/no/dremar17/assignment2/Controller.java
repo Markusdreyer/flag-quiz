@@ -30,6 +30,7 @@ public class Controller {
     private Rectangle bg;
 
     private int stage;
+    private int points;
 
 
 
@@ -62,9 +63,7 @@ public class Controller {
                     circle2.setFill(Color.GREEN);
                     break;
             }
-
-
-
+            points++;
         }
 
         else {
@@ -93,7 +92,7 @@ public class Controller {
         }
         stage++;
         if(stage > 4) {
-            congratulation.setText("Congratulations, you have completed the quiz!");
+            congratulation.setText("Congratulations, you got " + points + "/" + stage + " right!");
             submitButton.setDisable(true);
         }
         answer.setText("");
@@ -101,26 +100,31 @@ public class Controller {
 
     public String imageCheck() {
         String imageURL;
-        Stop[] belgium = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.YELLOW), new Stop(2, Color.RED)};
-        Stop[] canada = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.RED)};
-        Stop[] china = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.RED)};
-        Stop[] uk = new Stop[] { new Stop(0, Color.BLACK), new Stop(1, Color.RED)};
-
+        Stop[] belgium = new Stop[] { new Stop(0, Color.rgb(248, 69, 69)), new Stop(1, Color.rgb(247, 197, 67))};
+        Stop[] canada = new Stop[] { new Stop(0, Color.WHITE), new Stop(1, Color.rgb(248, 69, 69))};
+        Stop[] china = new Stop[] { new Stop(0, Color.rgb(248, 69, 69)), new Stop(1, Color.rgb(247, 197, 67))};
+        Stop[] uk = new Stop[] { new Stop(0, Color.rgb(25,34,123)), new Stop(1, Color.rgb(248, 69, 69))};
 
         switch (stage) {
             case 0:
                 imageURL = "no/dremar17/assignment2/images/belgium.png";
-                LinearGradient lg1 = new LinearGradient(125, 0, 225, 0, false, CycleMethod.NO_CYCLE, belgium);
+                LinearGradient lg1 = new LinearGradient(390, 180, 225, 0, false, CycleMethod.NO_CYCLE, belgium);
                 bg.setFill(lg1);
                 break;
             case 1:
                 imageURL = "no/dremar17/assignment2/images/canada.png";
+                LinearGradient lg2 = new LinearGradient(390, 180, 225, 0, false, CycleMethod.NO_CYCLE, canada);
+                bg.setFill(lg2);
                 break;
             case 2:
                 imageURL = "no/dremar17/assignment2/images/china.png";
+                LinearGradient lg3 = new LinearGradient(390, 180, 225, 0, false, CycleMethod.NO_CYCLE, china);
+                bg.setFill(lg3);
                 break;
             case 3:
                 imageURL = "no/dremar17/assignment2/images/uk.png";
+                LinearGradient lg4 = new LinearGradient(390, 180, 225, 0, false, CycleMethod.NO_CYCLE, uk);
+                bg.setFill(lg4);
                 break;
             case 4:
                 imageURL = "no/dremar17/assignment2/images/uk.png";

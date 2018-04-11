@@ -20,26 +20,13 @@
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
-                  <Stop color="#63ffdb" />
-                  <Stop color="#e36142" offset="1.0" />
+                  <Stop color="#f84545" />
+                  <Stop color="#19227b" offset="1.0" />
                </stops>
             </LinearGradient>
          </fill>
       </Rectangle>
-        <TextField id="answer" fx:id="answer" layoutX="15.0" layoutY="327.0" prefHeight="27.0" prefWidth="370.0" promptText="answer" />
-        <Button fx:id="submitButton" defaultButton="true" layoutX="391.0" layoutY="327.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
-        <ImageView id="image" fx:id="imageView" fitHeight="277.0" fitWidth="366.0" layoutX="85.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@images/australia.png" />
-            </image>
-        </ImageView>
-      <Text fx:id="congratulation" layoutX="131.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="287.93017578125" />
-      <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="25.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="47.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="67.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="89.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="111.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Rectangle  arcHeight="5.0" arcWidth="5.0" height="32.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="486.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="93.0" layoutX="-5.0" layoutY="326.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="486.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -49,7 +36,39 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Text fx:id="country" fill="WHITE" layoutX="252.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Australia?" wrappingWidth="65.64877319335938" />
-        <Text fill="WHITE" layoutX="122.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What's the capital of" wrappingWidth="132.1199493408203" />
+        <TextField id="answer" fx:id="answer" layoutX="6.0" layoutY="327.0" prefHeight="27.0" prefWidth="370.0" promptText="answer" />
+        <Button fx:id="submitButton" defaultButton="true" layoutX="392.0" layoutY="327.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
+        <ImageView id="image" fx:id="imageView" fitHeight="277.0" fitWidth="366.0" layoutX="85.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/australia.png" />
+            </image>
+        </ImageView>
+      <Text fx:id="congratulation" fill="WHITE" layoutX="137.0" layoutY="373.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="320.3465576171875">
+         <font>
+            <Font name="Futura Medium" size="15.0" />
+         </font></Text>
+      <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="14.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="36.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="56.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="78.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="100.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="32.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="486.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#545454" />
+                  <Stop color="#727272" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fx:id="country" fill="WHITE" layoutX="266.0" layoutY="20.0" stroke="#1b84a4" strokeType="OUTSIDE" text="Australia?" wrappingWidth="203.11993408203125">
+         <font>
+            <Font name="Futura Condensed ExtraBold" size="18.0" />
+         </font></Text>
+        <Text fill="WHITE" layoutX="94.0" layoutY="21.0" stroke="#1981a1" strokeType="OUTSIDE" text="What's the capital of" wrappingWidth="203.1199493408203">
+         <font>
+            <Font name="Futura Condensed ExtraBold" size="18.0" />
+         </font></Text>
     </children>
 </Pane>
