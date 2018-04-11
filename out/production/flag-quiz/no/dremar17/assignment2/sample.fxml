@@ -36,22 +36,22 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-        <TextField id="answer" fx:id="answer" layoutX="6.0" layoutY="327.0" prefHeight="27.0" prefWidth="370.0" promptText="answer" />
-        <Button fx:id="submitButton" defaultButton="true" layoutX="392.0" layoutY="327.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
+        <TextField id="answer" fx:id="answer" layoutX="6.0" layoutY="334.0" prefHeight="27.0" prefWidth="370.0" promptText="answer" />
+        <Button fx:id="submitButton" defaultButton="true" layoutX="395.0" layoutY="334.0" mnemonicParsing="false" onAction="#submitAction" text="Submit" />
         <ImageView id="image" fx:id="imageView" fitHeight="277.0" fitWidth="366.0" layoutX="85.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/australia.png" />
             </image>
         </ImageView>
-      <Text fx:id="congratulation" fill="WHITE" layoutX="137.0" layoutY="373.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="320.3465576171875">
+      <Text fx:id="congratulation" fill="WHITE" layoutX="137.0" layoutY="383.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="320.3465576171875">
          <font>
             <Font name="Futura Medium" size="15.0" />
          </font></Text>
-      <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="14.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="36.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="56.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="78.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="100.0" layoutY="367.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle1" fill="DODGERBLUE" layoutX="13.0" layoutY="377.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle2" fill="DODGERBLUE" layoutX="35.0" layoutY="377.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle3" fill="DODGERBLUE" layoutX="55.0" layoutY="377.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle4" fill="DODGERBLUE" layoutX="77.0" layoutY="377.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="circle5" fill="DODGERBLUE" layoutX="99.0" layoutY="377.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="32.0" layoutX="-3.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="486.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
